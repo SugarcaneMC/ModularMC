@@ -1,2 +1,3 @@
 # ModularMC
-A modular Minecraft server made in C++
+A modular Minecraft server made in Java.
+We may try to unite the APIs. Maybe...
