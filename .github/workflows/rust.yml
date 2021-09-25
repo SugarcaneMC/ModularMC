@@ -21,8 +21,8 @@ jobs:
       with:
         profile: minimal
         toolchain: stable
-    - name: Cache
-      uses: Swatinem/rust-cache@v1
+    - name: Rust Cache
+      uses: Swatinem/rust-cache@v1.3.0
     - name: Build
       run: cargo build --verbose
     - name: Run tests
