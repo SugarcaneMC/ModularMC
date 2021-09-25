@@ -16,13 +16,17 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: ToolChain
-      uses: actions-rs/toolchain@v1
+    - name: Cache
+    - uses: actions/cache@v2
       with:
-        profile: minimal
-        toolchain: stable
-    - name: Rust Cache
-      uses: Swatinem/rust-cache@v1
+        path: |
+          ~/.cargo/bin/
+          ~/.cargo/registry/index/
+          ~/.cargo/registry/cache/
+          ~/.cargo/git/db/
+          target/
+        key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+    
     - name: Build
       run: cargo build --verbose
     - name: Run tests
