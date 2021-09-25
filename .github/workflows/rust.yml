@@ -37,4 +37,8 @@ jobs:
       
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.4
+      with:
+        name: ModularMC-Server
+        path: target/debug/ 
+        
 
