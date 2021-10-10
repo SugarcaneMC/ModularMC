@@ -29,7 +29,7 @@ jobs:
         
     
     - name: Build
-      run: cargo build -j 40 --verbose --release
+      run: cargo build --release
       
       
     - name: Run tests
