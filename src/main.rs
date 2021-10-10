@@ -8,7 +8,7 @@ fn main() {
             let stream = stream.unwrap();
 
             let _worker = thread::spawn(move || {
-                let stream = stream; // move stream into this func
+                let _stream = stream; // move stream into this func
             }).join().unwrap();
         }
 
