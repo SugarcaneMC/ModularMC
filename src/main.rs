@@ -1,5 +1,3 @@
-//Make rust shutup about _snake_case
-#![allow(non_snake_case)]
 use std::net;
 use std::thread;
 fn main() {
