@@ -4,7 +4,7 @@ version = "0.1.0"
 authors = ["I ran out of name ideas", "QPCrummer", "Jneos"]
 description = "A modular Minecraft server where YOU get total control over the server"
 
-edition = "2018"
+edition = "2020"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
