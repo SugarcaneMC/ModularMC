@@ -3,18 +3,12 @@ use std::thread;
 use std::io::Read;
 
 fn main() {
-<<<<<<< HEAD
     let boss_thread = thread::spawn(|| {
         let listener = net::TcpListener::bind("127.0.0.1:2556").unwrap();
-=======
-    let _boss_thread = thread::spawn(|| {
-        let listener = net::TcpListener::bind("127.0.0.1:8080").unwrap();
->>>>>>> 477cacac4ca0bf8e18163c1dd6ccdb30f2e175bd
 
         for stream in listener.incoming() {
             let stream = stream.unwrap();
 
-<<<<<<< HEAD
             let worker = thread::spawn(move || {
                 let mut stream = stream; // move stream into this func
 
@@ -33,16 +27,11 @@ fn main() {
                 let string = String::from_utf8_lossy(&mut buf);
 
                 println!("{:?}", buf);
-=======
-            let _worker = thread::spawn(move || {
-                let _stream = stream; // move stream into this func
->>>>>>> 477cacac4ca0bf8e18163c1dd6ccdb30f2e175bd
             }).join().unwrap();
         }
 
     }).join().unwrap();
 }
-<<<<<<< HEAD
 
 fn decode_var_int_i32(buf: &[u8;5]) -> Result<i32, ()> {
     println!("DECODING {:?}", buf);
@@ -57,5 +46,3 @@ fn decode_var_int_i32(buf: &[u8;5]) -> Result<i32, ()> {
     }
     Ok(value)
 }
-=======
->>>>>>> 477cacac4ca0bf8e18163c1dd6ccdb30f2e175bd
