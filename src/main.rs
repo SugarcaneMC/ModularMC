@@ -1,3 +1,5 @@
+mod encryption;
+mod var_int;
 use std::net;
 use std::thread;
 use std::io::Read;
