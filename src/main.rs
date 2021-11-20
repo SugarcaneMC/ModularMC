@@ -35,11 +35,12 @@ impl Decoder for PacketDecoder {
         };
 
 
-        todo!("get packet type and then return data array");
 
         println!("{}", packet_type);
 
         Ok(Some(var_int_length)) // retunr len for now
+
+        // TODO: read packet type, then return nested byte array
     }
 }
 
