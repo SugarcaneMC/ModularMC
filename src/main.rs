@@ -36,7 +36,7 @@ impl Decoder for PacketDecoder {
 
 
 
-        println!("{}", packet_type);
+        println!("{}", var_int_length);
 
         Ok(Some(var_int_length)) // retunr len for now
 
