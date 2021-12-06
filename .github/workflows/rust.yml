@@ -27,11 +27,8 @@ jobs:
           target/
         key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
         
-    - name: Run tests
-      run: cargo test --verbose 
-   
-    - name: Build
-      run: cargo build --release
+    - name: Run tests/Build
+      run: cargo test --verbose --release
         
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.4
