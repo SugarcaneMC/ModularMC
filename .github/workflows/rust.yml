@@ -31,12 +31,12 @@ jobs:
       run: cargo test --verbose
       
     - name: Build
-      run: cargo build --release
+      run: cargo build
         
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.4
       with:
         name: ModularMC-Server
-        path: target/release/deps/ModularMC.exe
+        path: target/debug/deps/ModularMC.exe
         
 
