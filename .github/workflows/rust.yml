@@ -27,13 +27,16 @@ jobs:
           target/
         key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
         
-    - name: Run tests/Build
-      run: cargo test --verbose --release
+    - name: Run tests
+      run: cargo test --verbose
+      
+    - name: Build
+      run: cargo build --release
         
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.4
       with:
         name: ModularMC-Server
-        path: target/release/ModularMC.exe
+        path: target/release/deps/ModularMC.exe
         
 
