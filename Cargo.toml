@@ -1,7 +1,7 @@
 [package]
-name = "ModularMC"
+name = "modularmc"
 version = "0.1.0"
-authors = ["I ran out of name ideas", "QPCrummer", "Jneos"]
+authors = ["I ran out of name ideas", "QPCrummer", "Jneos", "SuperMath101"]
 description = "A modular Minecraft server where YOU get total control over the server"
 
 edition = "2018"
