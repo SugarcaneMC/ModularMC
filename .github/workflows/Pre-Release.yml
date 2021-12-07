@@ -1,25 +1,13 @@
-name: ModularMC Extremely Overcomplicated Build Script!
+name: Pre-Release
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    branches: [ Release ]
 
 env:
   CARGO_TERM_COLOR: always
 
 jobs:
-
-  test:
-    name: Test
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-
-      - uses: Swatinem/rust-cache@v1
-      
-      - run: cargo test --verbose 
     
   Build-Windows:
     name: Build-Windows
