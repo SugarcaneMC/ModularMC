@@ -15,7 +15,7 @@ jobs:
         with:
           toolchain: stable
 
-      - name: '`cargo fmt`'
+      - name: '$ cargo fmt --check'
         run: cargo fmt --all --check
 
   ubuntu-compilation-check:
@@ -31,7 +31,12 @@ jobs:
         with:
           toolchain: stable
 
-      - name: '`cargo check`'
+      - name: '$ cargo check'
         uses: actions-rs/cargo@v1
         with:
           command: check
+
+      - name: '$ cargo test'
+        uses: actions-rs/cargo@v1
+        with:
+          command: test
