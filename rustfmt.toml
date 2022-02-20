@@ -1,3 +1,7 @@
 # TODO: Change to what we all have decided upon.
 hard_tabs = true
 tab_spaces = 2
+
+trailing_comma = "Never"
+max_width = 80
+use_small_heuristics = "Max"
