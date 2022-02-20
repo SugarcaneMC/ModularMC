@@ -6,4 +6,6 @@ edition = "2021"
 publish = false
 
 [dependencies]
+crossbeam = "0.8.1"
+lockfree = "0.5.1"
 slice-dst = "1.5.1"

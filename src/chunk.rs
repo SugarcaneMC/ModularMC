@@ -131,7 +131,7 @@ where
 impl UnsizedChunk {
 	pub fn new() -> Box<Self> {
 		// SAFETY: This invariant is upheld by the buffer layout.
-		unsafe {Self::from_raw_parts(0, &[])}
+		unsafe { Self::from_raw_parts(0, &[]) }
 	}
 
 	pub unsafe fn from_raw_parts(
@@ -184,7 +184,7 @@ unsafe impl SliceDst for UnsizedChunk {
 }
 
 pub struct BlockRef {
-	block: *const [u8],
+	pub(crate) block: *mut [u8],
 	start_bit: u8,
 	end_bit: u8
 }
